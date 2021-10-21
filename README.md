@@ -1,6 +1,6 @@
 # project_name
 
-## This project is to help an insurance company that has provided health insurance to its customers  and now they need to build a model to predict whether the policyholders (customers) from past year will also be interested in vehicle insurance provided by the company. With the limited resources to contact the potential customers interested in vehicle insurance, it is necessary to build a customers rank to enhance customer adhesion performance.
+This project is to help an insurance company that has provided health insurance to its customers  and now they need to build a model to predict whether the policyholders (customers) from past year will also be interested in vehicle insurance provided by the company. With the limited resources to contact the potential customers interested in vehicle insurance, it is necessary to build a customers rank to enhance customer adhesion performance.
 
 #### This project was made by Renato da Nova Favarin.
 
