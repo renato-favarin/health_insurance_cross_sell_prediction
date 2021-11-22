@@ -84,7 +84,7 @@ def precision_recall_at_k(table, k = 2000):
     table['ranking'] = table.index + 1 # as the index starts in 0 it is necessary to +1
     table['precision_at_k'] = table['target'].cumsum() / table['ranking']
     table['recall_at_k'] = table['target'].cumsum() / table['target'].sum()
-    return ((table.loc[k, 'precision_at_k'], table.loc[k, 'recall_at_k']),table)
+    return ((table.loc[k-1, 'precision_at_k'], table.loc[k-1, 'recall_at_k']),table) # as the loc uses index, it is necessary to -1 to return the desired k
 
 
 
