@@ -79,7 +79,7 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 
 # 4. Top 3 Data insights
 
-**The older the car, the more interest its owner have in acquiring vehicle insurance**
+### 1) The older the car, the more interest its owner have in acquiring vehicle insurance
 
 |Vehicle age|Interested in vehicle insurance|Not interested in vehicle insurance|
 |----------------|----------------|-------------|
@@ -88,9 +88,8 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 |Over 2 years|29.5%|70.5%|
 
 <br>
-<br>
 
-**If a customer already have vehicle insurance the chances of being interested in insurance are minimal**
+### 2) If a customer already have vehicle insurance the chances of being interested in insurance are minimal
 
 |Does the customer<br>have vehicle insurance?|Interested in vehicle insurance|Not interested in vehicle insurance|
 |----------------|----------------|-------------|
@@ -98,17 +97,23 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 |Yes|0.1%|99.9%|
 
 <br>
-<br>
+
+### 3) Age is relevant in the decision to take out vehicle insurance**
+
+<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/age_response.png" alt="age vs response" title="age vs response" align="center" height="400" class="center"/>
 
 
-**Age is relevant in the decision to take out vehicle insurance**
+# 5. Machine learning models applied
+
+All machine learning algorithms were trained using cross validation on training data. A quick adjustment of the hyper-parameters was also made to check any performance differences with different settings.
+The only model that underwent significant changes depending on the configuration of the hyper-parameters was the KNN. The results of all model configurations can be checked on individual notebooks, each dedicated to a machine learning algorithm.
+
+The gain curve is presented below considering the best configuration found for each model. As a comparison, we have what would be the perfect model, that is, the one that orders the list perfectly, considering all interested parties before listing the first non-interested customer.
+A comparison is also made with the random model, that is, one that orders the list of customers in a completely random manner (the current baseline of the company).
 
 
-**True/False.**
+<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/gain.png" alt="age vs response" title="age vs response" align="center" height="600" class="center"/>
 
-# 5. Machine Learning Models Applied
-
-Cross Validation
 Models' results
 Gain curve
 Lift curve
