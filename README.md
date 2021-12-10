@@ -79,15 +79,6 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 
 # 4. Top 3 Data insights
 
-**If a customer already have vehicle insurance the chances of being interested in insurance are minimal**
-
-|Does the customer<br>have vehicle insurance?|Interested in vehicle insurance|Not interested in vehicle insurance|
-|----------------|----------------|-------------|
-|No|22.5%|77.5%|
-|Yes|0.1%|99.9%|
-
-<br>
-
 **The older the car, the more interest its owner have in acquiring vehicle insurance**
 
 |Vehicle age|Interested in vehicle insurance|Not interested in vehicle insurance|
@@ -97,6 +88,18 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 |Over 2 years|29.5%|70.5%|
 
 <br>
+<br>
+
+**If a customer already have vehicle insurance the chances of being interested in insurance are minimal**
+
+|Does the customer<br>have vehicle insurance?|Interested in vehicle insurance|Not interested in vehicle insurance|
+|----------------|----------------|-------------|
+|No|22.5%|77.5%|
+|Yes|0.1%|99.9%|
+
+<br>
+<br>
+
 
 **Age is relevant in the decision to take out vehicle insurance**
 
