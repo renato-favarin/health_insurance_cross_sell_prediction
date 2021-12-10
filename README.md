@@ -14,8 +14,8 @@ This project is to meet an insurance company demand that has provided health ins
 
 # 2. Business assumptions
 
-The Marketing Manager stated that they are only able to offer adequate treatment in the sales campaign - including calls, invitations for conversations in person and special attention to clarify doubts - up to 40% of last year's health insurance policyholders. 
-Therefore, the company then wants to obtain an ordered list of customers most likely to purchase vehicle insurance to maximize customer conversion.
+The Marketing Manager stated that they are only able to offer adequate treatment during sales campaign - including calls, invitations for conversations in person and special attention to clarify doubts - up to 40% of last year's health insurance policyholders. 
+Therefore, the company wants to obtain an ordered list of customers most likely to purchase vehicle insurance to maximize customer conversion.
 
 # 3. Solution strategy
 
@@ -27,14 +27,14 @@ The strategy to solve this challenge was:
 
 **Step 01. Data description**
 
-The first step was to collect the data which were at a postgreSQL database in the AWS Cloud and understand the data; 
-There are 304887 customers records, containing different attributes such as: "gender", "age", "driving license", "vehicle age", "policy sales channel", among others; these data show the customer's interest in taking out car insurance, based on past experiences.
+The first step was to collect the data which were at a postgreSQL database in the AWS Cloud and understand the data. 
+There are 304887 customers records, containing different attributes such as: "gender", "age", "driving license", "vehicle age", "policy sales channel", among others; these data show the customer's final interest in taking out car insurance, based on past experiences.
 
-Important to mention that 20% of data were extracted (randomly, but stratified by response) for further testing of the model.
+Important to mention that 20% of data were extracted (randomly, but stratified by response) for further testing of the final model.
 
 **Step 02. Feature engineering**
 
-The responses of the "vehicle age" feature were changed to the snake_case pattern (for later one hot encoding) and the responses of the "vehicle damage" feature were changed: the originals "Yes" and "No" by 1 and 0, respectively.
+The responses of the "vehicle age" feature were changed to the snake_case pattern (for later one hot encoding) and the responses of the "vehicle damage" feature were also changed: the originals "Yes" and "No" by 1 and 0, respectively.
 
 **Step 03. Data filtering:**
 
