@@ -60,10 +60,10 @@ Different machine learning algorithms were evaluated and tested with cross-valid
 
 The "predict_proba" method (the probabilities for the target) was used to sort the customer's list and plot the cumulative gains and lift curves.
 
-Finally, precision@k and recall@k (in this case, k = 10%, 20%, 30% and 40%) metrics were used to quantify the performance of the models and to choose the better one.
+Finally, **precision@k** and **recall@k** (in this case, k = 10%, 20%, 30% and 40%) metrics were used to quantify the performance of the models and to choose the better one.
 
-- The precision@k is the proportion of recommended items in the top-k set that are relevant, where k is the number (or percentage, in this case) of rows of the class 1 (those that are intereseted in vehicle insurance) in the sorted probability table. 
-- The recall@k is the proportion of relevant items found in the top-k recommendations.
+- The **precision@k** is the proportion of recommended items in the top-k set that are relevant, where k is the number (or percentage, in this case) of rows of the class 1 (those that are intereseted in vehicle insurance) in the sorted probability table. 
+- The **recall@k** is the proportion of relevant items found in the top-k recommendations.
 
 **Step 08. Hyperparameter fine tunning**
 
@@ -82,7 +82,7 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 ### 1) The older the car, the more interest its owner have in acquiring vehicle insurance
 
 |Vehicle age|Interested in vehicle insurance|Not interested in vehicle insurance|
-|----------------|----------------|-------------|
+|----------------|:----------------:|:-------------:|
 |Below 1 year|4.4%|95.6%|
 |Between 1 and 2 years|17.4%|82.6%|
 |Over 2 years|29.5%|70.5%|
@@ -92,7 +92,7 @@ To facilitate the use of the model and allow the ordering of new customer lists,
 ### 2) If a customer already have vehicle insurance the chances of being interested in insurance are minimal
 
 |Does the customer<br>have vehicle insurance?|Interested in vehicle insurance|Not interested in vehicle insurance|
-|----------------|----------------|-------------|
+|----------------|:----------------:|:-------------:|
 |No|22.5%|77.5%|
 |Yes|0.1%|99.9%|
 
@@ -110,15 +110,36 @@ The only model that underwent significant changes depending on the configuration
 
 The gain curve is presented below considering the best configuration found for each model. As a comparison, we have what would be the perfect model, that is, the one that orders the list perfectly, considering all interested parties before listing the first non-interested customer.
 A comparison is also made with the random model, that is, one that orders the list of customers in a completely random manner (the current baseline of the company).
+Th
+
+<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/gain.png" alt="cumulative gains curve" title="cumulative gains curve" align="center" height="600" class="center"/>
+
+The lift curve (comparative of how much better the model is in relation to the random choice) is presented next.
+
+<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/lift.png" alt="lift curve" title="lift curve" align="center" height="600" class="center"/>
+
+The precision@k and recall@k for different proportions, up to 40%, of the different models are shown below.
 
 
-<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/gain.png" alt="age vs response" title="age vs response" align="center" height="600" class="center"/>
+|<img width=30/> Precision@|K-nearest neighbors|Logistic regression |Random forest classifier |Balanced random forest classifier |Xgboost classifier |Perfect model |
+|----------|:----------:|:-------------------:|:------------------------:|:---------------------------------:|:------------------:|:-------------:|
+| 10% | 0.32 | 0.35 | 0.36 |0.39 |0.39 | 1.00 |
+| 20% | 0.30 | 0.33 | 0.33 |0.35 |0.35 | 0.61 |
+| 30% | 0.28 | 0.30 | 0.31 |0.32 |0.32 | 0.41 |
+| 40% | 0.26 | 0.27 | 0.28 |0.28 |0.28 | 0.31 |
 
-Models' results
-Gain curve
-Lift curve
-Precision @ k table
-Recall @ k table
+
+|<img width=75/> Recall@|K-nearest neighbors|Logistic regression|Random forest classifier|Balanced random forest classifier|Xgboost classifier|Perfect model |
+|----------------|:---------------:|:------------------:|:-----------------------:|:--------------------------------:|:-----------------:|:-------------:|
+| 10% | 0.26 | 0.28 | 0.30 | 0.32 | 0.32 | 0.82 |
+| 20% | 0.48 | 0.53 | 0.54 | 0.57 | 0.58 | 1.00 |
+| 30% | 0.68 | 0.74 | 0.77 | 0.78 | 0.78 | 1.00 |
+| 40% | 0.85 | 0.88 | 0.91 | 0.91 | 0.92 | 1.00 |
+
+The best models are Xgboost classifier and Balanced random forest classifier. Also, the Xgboost classifier did slightly better in recall at 40%.
+<br> 
+
+Xgboost classifier is then considered for deployment into production.
 
 
 # 6. Machine Learning Model Performance
@@ -130,7 +151,9 @@ Test results
 
 # 7. Business Results
 
-Deploy at google sheets
+We can note that by applying this model approximately 92% of potential customers interested in vehicular insurance will be converted by addressing 40% of the total customers currently with only health insurance.
+
+Deploy google sheets
 
 # 8. Conclusions
 
