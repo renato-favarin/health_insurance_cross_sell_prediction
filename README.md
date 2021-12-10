@@ -142,24 +142,41 @@ The best models are Xgboost classifier and Balanced random forest classifier. Al
 Xgboost classifier is then considered for deployment into production.
 
 
-# 6. Machine Learning Model Performance
+# 6. Machine learning model performance
 
-XGBoost final config
-Gain and lift curves
-Test results
+After preparing the training data (extracted from the raw data, as described in step 1 of the solution strategy) following the same pipeline used in training the models, we can finally evaluate the model, simulating the production environment, as the data is completely new.
+
+
+<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/gain_lift_final_model.png" alt="cumulative gains curve and lift curve" title="cumulative gains curve and lift curve" align="center" height="700" class="center"/>
+
+
+As can be seen, after training the model with the training and validation datasets and testing it with the new data, the model continued to perform very well, with similar metric values obtained previously.
+
+
+|Precision@|Xgboost classifier (train)|Xgboost classifier (test)
+|----------------|:---------------:|:------------------:|
+| 10% | 0.39 | 0.40 |
+| 20% | 0.35 | 0.36 |
+| 30% | 0.32 | 0.32 |
+| 40% | 0.28 | 0.28 |
+
+|Recall@ <img width=20/> |Xgboost classifier (train)|Xgboost classifier (test)
+|----------------|:---------------:|:------------------:|
+| 10% | 0.32 | 0.32 |
+| 20% | 0.58 | 0.58 |
+| 30% | 0.78 | 0.79 |
+| 40% | 0.92 | 0.93 |
 
 
 # 7. Business Results
 
-We can note that by applying this model approximately 92% of potential customers interested in vehicular insurance will be converted by addressing 40% of the total customers currently with only health insurance.
+We can note that by applying this model approximately 93% of potential customers interested in vehicular insurance will be converted by addressing 40% of the total customers currently with only health insurance.
 
 Deploy google sheets
 
 # 8. Conclusions
 
-# 9. Lessons Learned
-
-# 10. Next Steps to Improve
+# 9. Next Steps to Improve
 
 # LICENSE
 
