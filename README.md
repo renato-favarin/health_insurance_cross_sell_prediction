@@ -5,8 +5,6 @@
 
 **Disclaimer**: this project was inspired by the "Health Insurance Cross Sell Prediction" challenge published on kaggle (https://www.kaggle.com/anmolkumar/health-insurance-cross-sell-prediction). It is a fictitious project but with all the steps of a real project.
 
-#### This project was made by Renato da Nova Favarin
-
 # 1. Business scenario
 
 This project is to meet an insurance company demand that has provided health insurance to its customers and now they need to build a model to predict whether the policyholders (customers) from past year will also be interested in vehicle insurance. With the limited resources to contact the potential customers interested in vehicle insurance it is necessary to build a customers rank to enhance customer adhesion performance. This is a learning to rank project (LTR).
