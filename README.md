@@ -172,14 +172,30 @@ As can be seen, after training the model with the training and validation datase
 
 We can note that by applying this model approximately 93% of potential customers interested in vehicular insurance will be converted by addressing 40% of the total customers currently with only health insurance.
 
-Deploy google sheets
+The model was deployed on Heroku (https://www.heroku.com/) and available through a spreadsheet in Google Sheets (https://docs.google.com/spreadsheets/d/13CCxxC_E1_ihTFkELHAXVpEJL2tH35sLbGaDbn_WBvs/edit#gid=0)
 
+Any employee of the insurance company can use the spreadsheet and establish a ranking of customers most likely to purchase vehicle insurance, with direct production data.
+
+As can be seen in the demonstration below, there is a button that, once activated, after a few seconds, returns the list already sorted by the customers most likely to purchase the new product.
+
+<img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/google_sheets_health_insurance.gif" alt="cumulative gains curve and lift curve" title="cumulative gains curve and lift curve" align="center" height="700" class="center"/>
+
+Feel free to visit the spreadsheet (it's shared) and do the sorting yourself.
+Try changing some attribute values and see the impact on that customer's Score.
 
 
 # 8. Conclusions
 
-# 9. Next Steps to Improve
+With the use of the model in production, it is expected, at least, to double the efficiency in the acquisition of new clients for vehicle insurance.
 
-# LICENSE
+This is because you will only need to contact 40% of customers to get over 90% conversion. Without the model, when contacting purely random customers, it is reasonable to say that to have 90% of customers likely to close a deal, you would also have to contact 90% of the total list. 
 
-# All Rights Reserved - Comunidade DS 2021
+# 9. Next steps to improve
+
+For future learning to rank problems or new CRISP rounds for this business scenario, consider training these models:
+
+- Balanced Bagging Classifier;
+- Easy Ensemble Classifier;
+- Random Under Sampler Classifier;
+- Stochastic Gradient Descent Classifier
+
