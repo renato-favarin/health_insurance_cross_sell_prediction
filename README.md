@@ -144,13 +144,13 @@ Xgboost classifier is then considered for deployment into production.
 
 # 6. Machine learning model performance
 
-After preparing the training data (extracted from the raw data, as described in step 1 of the solution strategy) following the same pipeline used in training the models, we can finally evaluate the model, simulating the production environment, as the data is completely new.
+After preparing the training data (extracted from the raw data, as described in step 1 of the solution strategy) following the same data pipeline used for training the models, we can finally evaluate the final model, simulating the production environment, as the data is completely new.
 
+The cumulative gains curve and lift curve of the test data are presented below.
 
 <img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/gain_lift_final_model.png" alt="cumulative gains curve and lift curve" title="cumulative gains curve and lift curve" align="center" height="700" class="center"/>
 
-
-As can be seen, after training the model with the training and validation datasets and testing it with the new data, the model continued to perform very well, with similar metric values obtained previously.
+As can be seen, after training the model with the training and validation datasets and testing it with the new data, the model continued to perform very well, with similar metric values obtained previously. The next two tables show the values of precision@k and recall@k up to 40%.
 
 
 |Precision@|Xgboost classifier (train)|Xgboost classifier (test)
@@ -173,6 +173,8 @@ As can be seen, after training the model with the training and validation datase
 We can note that by applying this model approximately 93% of potential customers interested in vehicular insurance will be converted by addressing 40% of the total customers currently with only health insurance.
 
 Deploy google sheets
+
+
 
 # 8. Conclusions
 
