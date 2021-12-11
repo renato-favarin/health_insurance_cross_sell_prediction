@@ -178,7 +178,7 @@ As can be seen in the demonstration below, there is a button that, once activate
 
 <img src="https://github.com/renato-favarin/health_insurance_cross_sell_prediction/blob/main/references/google_sheets_health_insurance.gif" alt="cumulative gains curve and lift curve" title="cumulative gains curve and lift curve" align="center" height="700" class="center"/>
 
-Feel free to visit the spreadsheet (it's shared) and do the sorting yourself.
+Feel free to contact me and get a permission to edit and perform the sorting yourself.
 Try changing some attribute values and see the impact on that customer's Score.
 
 
